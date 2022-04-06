@@ -34,7 +34,7 @@ const GameScreenFast = (props: IPropsGameScreen) => {
     setResult((prevResult) => ({ ...prevResult, [key]: value }))
   }
 
-  const saveResult = (isCorrect) => {
+  const saveResult = (isCorrect: Boolean) => {
     const correctWord = words[round - 1]
     const { past, past_participe } = correctWord
 
@@ -66,7 +66,7 @@ const GameScreenFast = (props: IPropsGameScreen) => {
   }
 
   useEffect(() => {
-    const handleEsc = (event) => {
+    const handleEsc = (event: any) => {
        if (event.key === '2') {
 	handleMiss();
       }
